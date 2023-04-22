@@ -1,0 +1,33 @@
+:root {
+    --dark-1: #000000;
+    --dark-2: #101010;
+    --dark-3: #202020;
+    --light-1: #ffffff;
+    --light-2: #efefef;
+    --light-3: #dfdfdf;
+    --light-blue: cyan;
+}
+
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url(space_grotesk.ttf);
+}
+
+body {
+    background-color: var(--dark-2);
+    color: var(--light-2);
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 2em;
+    max-width: 600px;
+}
+
+a {
+    color: var(--light-blue);
+    transition: all 0.25s ease;
+}
+
+a:hover {
+    color: var(--dark-2);
+    background-color: var(--light-blue)
+}
