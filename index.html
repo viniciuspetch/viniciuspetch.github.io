@@ -1,27 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Vinícius Araújo Petch</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  </head>
+<html lang="en" style="color-scheme:light dark">
 
-  <body>
-    <h3>🇧🇷 Vinícius Araújo Petch, Software Developer</h3>
-    <a href="about.html">[ ABOUT ME ]</a><br />
-    <a href="projects.html">[ PROJECTS ]</a><br />
-    <a href="scripts.html">[ SCRIPTS ]</a><br />
+<head>
+  <meta name="color-scheme" content="light dark">
+  <meta charset="utf-8" />
+  <title>Vinícius Araújo Petch</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
 
-    <h3>Contact</h3>
-    <i>viniciuspetch at gmail.com</i><br />
-    <a href="https://www.linkedin.com/in/viniciuspetch/">[ LINKEDIN ]</a><br />
-    <a href="https://github.com/viniciuspetch">[ GITHUB ]</a><br />
-  </body>
+<body>
+  <button type="button" style="position:fixed;top:0;left:0;font-size:0.75rem;border:1px solid black;border-radius:0px;"
+    id="theme-button">
+    Toggle theme
+  </button>
+  <h3>Vinícius Araújo Petch, Software Developer</h3>
+  <a href="https://www.linkedin.com/in/viniciuspetch/">[ LINKEDIN ]</a> | <a href="https://github.com/viniciuspetch">[
+    GITHUB ]</a> | <i>viniciuspetch at gmail.com</i>
+  <br />
+  <br />
+  <a href="about.html">[ ABOUT ME ]</a><br />
+  <a href="projects.html">[ PROJECTS ]</a><br />
+  <a href="scripts.html">[ SCRIPTS ]</a><br />
+</body>
+
+<script>
+  const colorScheme = document.querySelector('meta[name=color-scheme]');
+  const html = document.querySelector('html')
+  console.log(html.style.colorScheme)
+  const themeButton = document.getElementById('theme-button')
+  themeButton.addEventListener('click', () => {
+    console.log('hello world')
+    if (html.style.colorScheme === 'light dark') {
+      html.style.colorScheme = 'light'
+    }
+    else if (html.style.colorScheme === 'light') {
+      html.style.colorScheme = 'dark'
+    }
+    else {
+      html.style.colorScheme = 'light dark'
+    }
+
+  })
+</script>
+
 </html>
