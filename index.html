@@ -1,50 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" style="color-scheme:light dark">
+<html lang="en">
 
 <head>
   <meta name="color-scheme" content="light dark">
   <meta charset="utf-8" />
   <title>Vinícius Araújo Petch</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
 </head>
 
+<style>
+  body {
+    --white: #ddd;
+    --black: #222;
+    background-color: light-dark(var(--white), var(--black));
+    color: light-dark(var(--black), var(--white));
+    font-family: 'Karla', sans-serif;
+    margin: 1rem;
+    max-width: 800px;
+    line-height: 2rem;
+    font-size: 1.4rem;
+  }
+
+  a {
+    color: light-dark(blue, cyan);
+    padding: 0px 2px;
+  }
+
+  a:hover {
+    color: light-dark(var(--white), var(--black));
+    background-color: light-dark(blue, cyan);
+    transition: all 0.15s ease-in-out;
+  }
+</style>
+
 <body>
-  <button type="button" style="position:fixed;top:0;left:0;font-size:0.75rem;border:1px solid black;border-radius:0px;"
-    id="theme-button">
-    Toggle theme
-  </button>
-  <h3>Vinícius Araújo Petch, Software Developer</h3>
-  <a href="https://www.linkedin.com/in/viniciuspetch/">[ LINKEDIN ]</a> | <a href="https://github.com/viniciuspetch">[
-    GITHUB ]</a> | <i>viniciuspetch at gmail.com</i>
+  <h1 style="font-weight: 800;line-height: 3rem;">
+    Vinícius Araújo Petch
+  </h1>
+  <i>
+    Senior Software Developer
+  </i><br />
+  <a href="https://www.linkedin.com/in/viniciuspetch/">LinkedIn</a>,
+  <a href="https://github.com/viniciuspetch">GitHub</a>,
+  <i>viniciuspetch at gmail.com</i>
   <br />
   <br />
-  <a href="about.html">[ ABOUT ME ]</a><br />
-  <a href="projects.html">[ PROJECTS ]</a><br />
-  <a href="scripts.html">[ SCRIPTS ]</a><br />
+  <h2>Projects</h2>
+  <a href="https://github.com/viniciuspetch/n-queens-solver">N-queens solver</a>: solver for the n-queens problem.
+  Made in Python.<br />
+  <a href="https://github.com/viniciuspetch/list-ranker">Link ranker</a>: Web tool to rank lists with binary choices.
+  Made in Vue.js.<br />
+  <a href="https://github.com/viniciuspetch/viniciuspetch.github.io">This webpage</a>
 </body>
-
-<script>
-  const colorScheme = document.querySelector('meta[name=color-scheme]');
-  const html = document.querySelector('html')
-  console.log(html.style.colorScheme)
-  const themeButton = document.getElementById('theme-button')
-  themeButton.addEventListener('click', () => {
-    console.log('hello world')
-    if (html.style.colorScheme === 'light dark') {
-      html.style.colorScheme = 'light'
-    }
-    else if (html.style.colorScheme === 'light') {
-      html.style.colorScheme = 'dark'
-    }
-    else {
-      html.style.colorScheme = 'light dark'
-    }
-
-  })
-</script>
 
 </html>
